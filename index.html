@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Smart Attendance System</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/@vladmandic/face-api/dist/face-api.js"></script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="background-decor bg-1"></div>
+    <div class="background-decor bg-2"></div>
+
+    <div class="container">
+        <div class="glass-card video-container">
+            <h2>Live Scanner</h2>
+            <div class="webcam-box">
+                <video id="video" autoplay muted width="600" height="450"></video>
+            </div>
+            <div id="status-message" class="status">Initializing AI Models...</div>
+        </div>
+
+        <div class="glass-card log-container">
+            <h2>Attendance Log</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Student ID</th>
+                            <th>Name</th>
+                            <th>Status</th>
+                            <th>Time</th>
+                        </tr>
+                    </thead>
+                    <tbody id="attendance-rows">
+                        </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

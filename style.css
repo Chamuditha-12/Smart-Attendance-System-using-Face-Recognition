@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f172a, #1e1b4b);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+}
+
+/* Background Glowing Shapes */
+.background-decor {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: 1;
+}
+.bg-1 {
+    width: 300px;
+    height: 300px;
+    background: rgba(99, 102, 241, 0.4);
+    top: 10%;
+    left: 15%;
+}
+.bg-2 {
+    width: 400px;
+    height: 400px;
+    background: rgba(236, 72, 153, 0.25);
+    bottom: 10%;
+    right: 15%;
+}
+
+/* Main Layout Container */
+.container {
+    display: flex;
+    gap: 30px;
+    width: 95%;
+    max-width: 1200px;
+    z-index: 2;
+}
+
+/* Glassmorphism Card Style */
+.glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+.video-container {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.log-container {
+    flex: 0.9;
+}
+
+h2 {
+    font-weight: 500;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Webcam Display Box */
+.webcam-box {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: #000;
+}
+
+video {
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: scaleX(-1); /* Mirror view */
+}
+
+/* Face Detection Canvas Fixes */
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleX(-1); /* Mirror View එකට කොටු Align කිරීම */
+    pointer-events: none;
+}
+
+.status {
+    margin-top: 15px;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
+}
+
+/* Attendance Table Design */
+.table-wrapper {
+    max-height: 430px;
+    overflow-y: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th, td {
+    padding: 14px 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.95rem;
+}
+
+th {
+    background: rgba(255, 255, 255, 0.06);
+    color: #c7d2fe;
+    font-weight: 600;
+}
+
+td strong {
+    color: #38bdf8;
+}
+
+tr:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.badge-present {
+    background: rgba(34, 197, 94, 0.15);
+    color: #4ade80;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+}
