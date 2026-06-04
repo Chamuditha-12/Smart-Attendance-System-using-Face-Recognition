@@ -29,7 +29,6 @@ face-attendance/
 ├── script.js          # Webcam handling, model loading & face matching logic
 ├── .gitignore          # Prevents personal photos from being uploaded
 └── labeled_images/     # Database folder containing student records
-    ├── ST001_Sandaru/
-    │   └── 1.jpeg      # Clear face image of the student
-    └── ST002_Nirmal/
-        └── 1.jpeg
+    ├── ST001_chamuditha/
+       └── 1.jpeg      # Clear face image of the student
+    
